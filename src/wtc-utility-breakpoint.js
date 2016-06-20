@@ -8,9 +8,11 @@
   - *Requirements*    n/a
   - *Description*     Returns the breakpoint that the browser is currently sized at
   - *Edited by*       Liam Egan
-  - *Edited*          2016-06-17 15:43:58
+  - *Edited*          2016-06-20 11:51:50
   - *Version*         1.0
 */
+; 'use strict';
+
 (function()
 {
   var _base;
