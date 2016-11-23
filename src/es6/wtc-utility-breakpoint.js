@@ -45,24 +45,6 @@ class Breakpoints {
 
     return rtn;
   }
-
-  /**
-   * checkBreakpoint
-   * @cl  {string} String, separated with spaces (S M L XL, XXL)
-   * @return {boolean}
-  */
-  checkBreakpoint(cl) {
-    let breakpoints = cl.split(' ');
-    let current = this.getBreakpoint(true);
-
-    for (let i = 0; i < breakpoints.length; i++) {
-      let b = breakpoints[i];
-      if (current.indexOf(b) >= 0) {
-        return true;
-      }
-    }
-    return false;
-  }
 }
 
 export default Breakpoints;
