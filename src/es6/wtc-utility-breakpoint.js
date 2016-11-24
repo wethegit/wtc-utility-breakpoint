@@ -26,7 +26,7 @@ class Breakpoints {
    * getBreakpoint
    * @return {number} Number that correspond to the breakpoint.
   */
-  static getBreakpoint() {
+  static get getBreakpoint() {
     let bp = getComputedStyle(document.querySelector("body"), '::after').content;
     bp = bp.replace(/'|"/gi, '');
 
