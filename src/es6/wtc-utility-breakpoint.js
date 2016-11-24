@@ -11,36 +11,35 @@
   - *Edited*          2016-06-20 11:51:50
   - *Version*         1.0
 */
+
+const BREAKPOINT = {
+  S: 1,
+  M: 2,
+  L: 3,
+  XL: 4,
+  XXL: 5
+};
+
 class Breakpoints {
-  constructor() {
-    this.BREAKPOINT_S = 1;
-    this.BREAKPOINT_M = 2;
-    this.BREAKPOINT_L = 3;
-    this.BREAKPOINT_XL = 4;
-    this.BREAKPOINT_XXL = 5;
-  }
 
   /**
    * getBreakpoint
-   * @all  {boolean} Return an array with all the breakpoints if true.
-   * @return {number|array}
+   * @return {number} Number that correspond to the breakpoint.
   */
-  getBreakpoint(all = false) {
+  static getBreakpoint() {
     let bp = getComputedStyle(document.querySelector("body"), '::after').content;
     bp = bp.replace(/'|"/gi, '');
 
     let bps = bp.split(/,\s*/);
-    let rtn = [];
+    let rtn = 0;
 
     for (let i = 0; i < bps.length; i++) {
       bp = bps[i];
-      if (this['BREAKPOINT_' + bp]) {
-        rtn.push(this['BREAKPOINT_' + bp]);
-      }
-    }
 
-    if (!all) {
-      return rtn[0];
+      if (BREAKPOINT[bp]) {
+        rtn = BREAKPOINT[bp];
+        break;
+      }
     }
 
     return rtn;
