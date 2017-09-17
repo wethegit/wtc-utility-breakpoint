@@ -1,6 +1,6 @@
 {
   "name": "wtc-utility-breakpoint",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Returns the breakpoint that the browser is currently sized at.",
   "main": "dist/wtc-utility-breakpoint.js",
   "scripts": {

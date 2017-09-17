@@ -29,5 +29,6 @@ class Breakpoints {
     return BREAKPOINT.get(getComputedStyle(document.querySelector("body"), '::after').content.replace(/'|"/gi, ''));
   }
 }
+Breakpoints.BREAKPOINTS = BREAKPOINT;
 
 export default Breakpoints;
